@@ -26,9 +26,7 @@ class PlistDataMenager {
     }
     func loadData() {
         if  let data = try? Data(contentsOf: dataFilePath!) {
-            
             let decoder = PropertyListDecoder()
-            
             do{
                 textArray = try decoder.decode([PlistDataModel].self, from: data)
             }catch{
